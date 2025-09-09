@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wibo's own blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">我的博客</div>
+                <ul class="nav-links">
+                    <li><a href="#" id="home-link">首页</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">联系</a></li>
+                    <li><a href="#" id="logout-link" style="display: none;">退出</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 登录/注册表单 -->
+        <div id="auth-container" class="auth-container">
+            <h2 id="auth-title">登录</h2>
+            <form id="auth-form">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group" id="confirm-password-group" style="display: none;">
+                    <label for="confirm-password">确认密码</label>
+                    <input type="password" id="confirm-password">
+                </div>
+                <button type="submit" id="auth-button">登录</button>
+            </form>
+            <div class="toggle-auth">
+                <p id="auth-toggle">没有账号？<a id="auth-toggle-link">注册</a></p>
+            </div>
+        </div>
+
+        <!-- 博客内容区域 -->
+        <div id="blog-content" class="blog-content">
+            <!-- 发布帖子表单 -->
+            <div class="post-form">
+                <h2>发布新帖子</h2>
+                <form id="post-form">
+                    <div class="form-group">
+                        <label for="post-title">标题</label>
+                        <input type="text" id="post-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">内容</label>
+                        <textarea id="post-content" required></textarea>
+                    </div>
+                    <button type="submit">发布</button>
+                </form>
+            </div>
+
+            <!-- 帖子列表 -->
+            <div class="posts-container" id="posts-container">
+                <!-- 帖子将通过JS动态添加 -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; copyright: 2025 我的个人博客. 保留所有权利. by 刘嘉奇 Jacky Liu</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
